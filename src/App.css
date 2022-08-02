@@ -1,7 +1,7 @@
 * {
   color: #ffffff;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 body {
@@ -9,14 +9,20 @@ body {
 }
 
 .game-container {
-  height: 90vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 800px) {
+  .game-container {
+    justify-content: center;
+  }
 }
 
-.title-container{
+.title-container {
   text-align: center;
   width: 510px;
   border-bottom: solid 1px #3a3a3c;
@@ -24,10 +30,11 @@ body {
 
 .tile-container {
   width: 330px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
-.tile-container div{
+.tile-container div {
   display: flex;
 }
 .tile-container .tile {
@@ -40,7 +47,6 @@ body {
   align-items: center;
   margin: 2px;
   font-weight: bold;
-
 }
 .key-container {
   width: 510px;
@@ -56,29 +62,191 @@ body {
   margin: 4px;
   font-weight: bold;
 }
-.key-container button:nth-child(11){
+.key-container button:nth-child(11) {
   margin-left: 20px;
 }
 .key-container button:nth-child(20),
-.key-container button:nth-child(28){
+.key-container button:nth-child(28) {
   width: 68px;
+  text-align: center;
 }
 
+/* works for my phone */
 
-
-.tile.flip{
+@media screen and (max-width: 550px) {
+  .key-container {
+    width: auto;
+    justify-content: center;
+  }
+  .key-container button {
+    width: 44px;
+    height: 50px;
+    margin: 4px;
+  }
+  .key-container button:nth-child(11) {
+    margin-left: 12px;
+  }
+  .key-container button:nth-child(19) {
+    margin-right: 12px;
+  }
+  .key-container button:nth-child(20) {
+    width: 55px;
+  }
+  .key-container button:nth-child(28) {
+    width: 55px;
+  }
+}
+@media screen and (max-width: 535px) {
+  .key-container {
+    width: auto;
+    justify-content: center;
+  }
+  .key-container button {
+    width: 40px;
+    height: 44px;
+    margin: 4px;
+  }
+  .key-container button:nth-child(11) {
+    margin-left: 24px;
+  }
+  .key-container button:nth-child(19) {
+    margin-right: 24px;
+  }
+  .key-container button:nth-child(20) {
+    width: 55px;
+  }
+  .key-container button:nth-child(28) {
+    width: 55px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .key-container {
+    width: auto;
+    justify-content: center;
+  }
+  .key-container button {
+    width: 36px;
+    height: 40px;
+    margin: 4px;
+  }
+  .key-container button:nth-child(11) {
+    margin-left: 24px;
+  }
+  .key-container button:nth-child(19) {
+    margin-right: 24px;
+  }
+  .key-container button:nth-child(20) {
+    width: 55px;
+  }
+  .key-container button:nth-child(28) {
+    width: 55px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .key-container {
+    width: auto;
+    justify-content: center;
+  }
+  .key-container button {
+    width: 32px;
+    height: 36px;
+    margin: 4px;
+  }
+  .key-container button:nth-child(11) {
+    margin-left: 24px;
+  }
+  .key-container button:nth-child(19) {
+    margin-right: 24px;
+  }
+  .key-container button:nth-child(20) {
+    width: 55px;
+  }
+  .key-container button:nth-child(28) {
+    width: 55px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .key-container {
+    width: auto;
+    justify-content: center;
+  }
+  .key-container button {
+    width: 28px;
+    height: 32px;
+    margin: 4px;
+  }
+  .key-container button:nth-child(11) {
+    margin-left: 24px;
+  }
+  .key-container button:nth-child(19) {
+    margin-right: 24px;
+  }
+  .key-container button:nth-child(20) {
+    width: 55px;
+  }
+  .key-container button:nth-child(28) {
+    width: 55px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .key-container {
+    width: auto;
+    justify-content: center;
+  }
+  .key-container button {
+    width: 24px;
+    height: 28px;
+    margin: 4px;
+  }
+  .key-container button:nth-child(11) {
+    margin-left: 24px;
+  }
+  .key-container button:nth-child(19) {
+    margin-right: 24px;
+  }
+  .key-container button:nth-child(20) {
+    width: 48px;
+  }
+  .key-container button:nth-child(28) {
+    width: 46px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .key-container {
+    width: auto;
+    justify-content: center;
+  }
+  .key-container button {
+    width: 24px;
+    height: 28px;
+    margin: 4px;
+  }
+  .key-container button:nth-child(11) {
+    margin-left: 24px;
+  }
+  .key-container button:nth-child(19) {
+    margin-right: 24px;
+  }
+  .key-container button:nth-child(20) {
+    width: 48px;
+  }
+  .key-container button:nth-child(28) {
+    width: 46px;
+  }
+}
+.tile.flip {
   animation: 0.5s linear flipping;
 }
 
-@keyframes flipping{
-  0%{
-      transform: rotateX(0deg);
+@keyframes flipping {
+  0% {
+    transform: rotateX(0deg);
   }
-  50%{
-      transform: rotateX(90deg);
+  50% {
+    transform: rotateX(90deg);
   }
-  100%{
-      transform: rotateX(0deg);
+  100% {
+    transform: rotateX(0deg);
   }
 }
 
@@ -94,7 +262,3 @@ body {
   background-color: #538d4e !important;
   border: none;
 }
-
-
-
-

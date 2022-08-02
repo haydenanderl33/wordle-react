@@ -241,12 +241,12 @@ const App = () => {
     keysCopy.forEach((e, i) => {
       for (let i = 0; i < guessArray.length; i++) {
         if (e.coloR === "#538d4e") {
-          e.coloR = "#538d4e"
+          e.coloR = "#538d4e";
         }
       }
     });
-    
-    console.log('guessArray:', guessArray)
+
+    console.log("guessArray:", guessArray);
 
     setKeys(keysCopy);
 
@@ -257,8 +257,8 @@ const App = () => {
     let guess = [...guessRows];
     let guessLetters = guess[currentRow].map((e) => e.lettR).join("");
 
-    // let word = checkIfWordExists(guessLetters);
-    let word = true;
+    let word = checkIfWordExists(guessLetters);
+    // let word = true;
 
     if (word === false) {
       toast.error("Word Not Found", { position: "", duration: 4000 });
@@ -276,11 +276,18 @@ const App = () => {
             toast.error("Game Over", { position: "", duration: 4000 });
             setTimeout(() => {
               toast(
-                `Wordle was ${wordle}`,
-                { icon: "🙁" },
+                "Answer in ...3 ...2 ...1",
+                { icon: "🧐" },
                 { position: "", duration: 4000 }
               );
-            }, 5000);
+            }, 4000);
+            setTimeout(() => {
+              toast(
+                `Wordle was ${wordle}`,
+                { icon: "🙁" },
+                { position: "", duration: 6000 }
+              );
+            }, 8000);
             setGameOver(true);
             return;
           }
